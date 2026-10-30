@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heritage GIS India | Spatial Inventory & Seismic Context</title>
+  <meta name="description" content="India-wide heritage monument inventory with earthquake and fault context using supplied datasets.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="eyebrow">SPATIAL HERITAGE INVENTORY • INDIA</div>
+    <h1>Heritage GIS India</h1>
+    <p class="subtitle">Multi-source heritage inventory with earthquake and fault context</p>
+  </div>
+  <div class="header-actions">
+    <a class="official-link" href="https://riseq.seismo.gov.in/riseq/interactive/index/SHhRcEJKMVNQZko2VzdHZGYxbm1SUT09/Reviewed" target="_blank" rel="noopener">Official NCS seismic maps ↗</a>
+    <span class="header-tag">Research prototype · v1.0</span>
+  </div>
+</header>
+<main>
+  <section class="metrics" aria-label="Dataset summary">
+    <article><span class="metric" id="monumentCount">—</span><span class="metric-label">Monument records</span></article>
+    <article><span class="metric" id="earthquakeCount">—</span><span class="metric-label">Earthquake events</span></article>
+    <article><span class="metric" id="faultCount">—</span><span class="metric-label">Fault segments</span></article>
+    <article><span class="metric" id="buildingCount">—</span><span class="metric-label">Building records</span></article>
+  </section>
+  <section class="toolbar">
+    <input id="searchBox" type="search" placeholder="Search monument name or state…" aria-label="Search monuments">
+    <select id="stateFilter" aria-label="Filter by state"><option value="">All states</option></select>
+    <button id="resetView" type="button">Reset India view</button>
+    <span id="status" role="status">Loading spatial layers…</span>
+  </section>
+  <section class="map-wrap">
+    <div id="map" aria-label="Interactive map of Indian heritage monuments and earthquake context"></div>
+    <aside class="map-note">
+      <strong>Map layers</strong>
+      <p>Use the layer control to switch heritage monuments, earthquake epicentres, earthquake heat context, supplied fault segments and building records.</p>
+      <p class="note-small">Background: OpenStreetMap tiles. Earthquake layers are derived from the uploaded earthquake catalogue; they are not an official seismic zonation map.</p>
+    </aside>
+  </section>
+  <section class="below">
+    <div class="panel">
+      <h2>How to use</h2>
+      <ol>
+        <li>Zoom into a region and select a monument marker for its source attributes.</li>
+        <li>Toggle earthquake epicentres and the earthquake density overlay to inspect catalogue context.</li>
+        <li>Switch on supplied fault segments to view the endpoint-based fault lines.</li>
+        <li>Search by monument name or filter by state.</li>
+      </ol>
+    </div>
+    <div class="panel warning">
+      <h2>Research interpretation</h2>
+      <p>This is a desktop GIS screening viewer, not a structural safety assessment. Earthquake proximity and event density do not directly represent site-specific ground motion or building vulnerability. Fault lines are approximate segments reconstructed from supplied endpoints. Verify all source records before research conclusions.</p>
+    </div>
+  </section>
+  <footer>
+    <span>Prepared from user-supplied datasets · Heritage GIS Database v1.0</span>
+    <span><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> · <a href="README.md">Repository documentation</a></span>
+  </footer>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
