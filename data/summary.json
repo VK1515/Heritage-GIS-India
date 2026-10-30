@@ -1,0 +1,21 @@
+{
+  "monument_rows": 3079,
+  "monuments_within_india_bbox": 3077,
+  "monuments_outside_india_bbox_or_missing": 2,
+  "monument_duplicate_name_records": 180,
+  "monument_duplicate_coordinate_records": 136,
+  "building_rows": 41,
+  "building_records_within_india_bbox": 40,
+  "building_possible_matches_1km": 28,
+  "building_possible_matches_1to5km": 7,
+  "earthquake_rows": 942,
+  "earthquakes_within_india_bbox": 939,
+  "fault_segments_extracted": 78,
+  "fault_segments_within_india_bbox": 78,
+  "fault_sites_rows": 320,
+  "fault_sites_within_india_bbox": 246,
+  "earthquake_date_min": "1964-09-15",
+  "earthquake_date_max": "2024-07-20",
+  "earthquake_mag_min": 3.2,
+  "earthquake_mag_max": 7.9
+}
